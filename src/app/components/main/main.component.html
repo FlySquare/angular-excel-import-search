@@ -8,6 +8,7 @@
     </div>
     <div class="area">
       <input type="file" (change)="fileExcelUpload($event)" multiple="false" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+      <button (click)="download();">Download Example Excel</button>
     </div>
     <div class="area">
       <input id="searchdata" (keyup)="searchData()" [(ngModel)]="inputText" type="text" placeholder="Search anything...">

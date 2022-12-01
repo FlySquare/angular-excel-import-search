@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as XLSX from "xlsx";
 import {StorageService} from "../../services/storage.service";
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -13,8 +14,13 @@ export class MainComponent implements OnInit {
   selectedTotal = 0;
   inputText = '';
   constructor(
-    private storageService: StorageService
+    private storageService: StorageService,
+    private router: Router
   ) { }
+
+  download(){
+    window.open('/angular-excel-import-search/assets/example.xlsx', '_blank');
+  }
 
   searchData(){
     let data = this.storageService.getFromLocalStorage();

@@ -25,6 +25,17 @@
       background-color: white;
     }
     .area{
+        button{
+          margin-top: 15px;
+          width: 30%;
+          height: 40px;
+          border-radius: 15px;
+          border: #ccc solid 1px;
+          background: #30bd30;
+          color: white;
+          font-size: 20px;
+          font-weight: 500;
+        }
       #searchdata{
         width: 50%;
         height: 40px;
