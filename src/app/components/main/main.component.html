@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="main">
+    <div class="profile">
+      <h1>
+        <strong>Angular Excel Import Search</strong>
+        <p style="font-size: 20px; font-weight: 400">Total: {{ selectedTotal|currency:'₺' }}</p>
+      </h1>
+    </div>
+    <div class="area">
+      <input type="file" (change)="fileExcelUpload($event)" multiple="false" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+    </div>
+    <div class="area">
+      <input id="searchdata" (keyup)="searchData()" [(ngModel)]="inputText" type="text" placeholder="Search anything...">
+      <table class="row-border hover excelTable">
+        <thead>
+        <tr>
+          <th>Select</th>
+          <th *ngFor="let title of excelTitles">{{ title }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let detail of excelDatas">
+          <td><input (click)="selectedData(detail)" [id]="detail[0]" type="checkbox" ></td>
+          <td>{{ detail[0] }}</td>
+          <td>{{ detail[1] }}</td>
+          <td>{{ detail[3] }} ₺</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>

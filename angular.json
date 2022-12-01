@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "angular-excel-import-search"
+  "defaultProject": "angular-excel-import-search",
+  "cli": {
+    "analytics": "6938cbc2-664e-489c-8851-7567858e8970"
+  }
 }
