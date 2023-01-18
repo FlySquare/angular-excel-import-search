@@ -69,7 +69,9 @@ export class MainComponent implements OnInit {
     ];
     data.splice(0, 1);
     this.excelDatas = data;
-    console.log(this.excelDatas);
+    this.excelDatas.forEach((value: any) => {
+      this.selectedTotal += value[3];
+    });
   }
 
 }
